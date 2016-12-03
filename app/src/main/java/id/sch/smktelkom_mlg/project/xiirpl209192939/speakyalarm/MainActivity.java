@@ -4,20 +4,24 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import java.util.Calendar;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     TimePicker alarmTimePicker;
     PendingIntent pendingIntent;
     AlarmManager alarmManager;
-
+    String text;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -25,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         alarmTimePicker = (TimePicker) findViewById(R.id.timePicker);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+
     }
     public void OnToggleClicked(View view)
     {
@@ -37,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
             calendar.set(Calendar.MINUTE, alarmTimePicker.getCurrentMinute());
             Intent intent = new Intent(this, AlarmReceiver.class);
             pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+
+            EditText editText = (EditText)findViewById(R.id.editText);
+            String text = editText.getText().toString();
+
+            Intent myIntent = new Intent(view.getContext(),AlarmReceiver.class);
+            myIntent.putExtra("mytext",text);
+            startActivity(myIntent);
 
             time=(calendar.getTimeInMillis()-(calendar.getTimeInMillis()%60000));
             if(System.currentTimeMillis()>time)
