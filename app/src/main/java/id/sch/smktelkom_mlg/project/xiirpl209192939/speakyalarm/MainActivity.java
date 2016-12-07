@@ -53,8 +53,7 @@ public class MainActivity extends Activity {
     public void OnToggleClicked(View view)
     {
         if (((ToggleButton) view).isChecked()) {
-            String text = editText.getText().toString();
-            Log.d("MyActivity", "Alarm On");
+            Log.d("MainActivity", "Alarm On");
             Calendar calendar = Calendar.getInstance();
             calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getCurrentHour());
             calendar.set(Calendar.MINUTE, alarmTimePicker.getCurrentMinute());
@@ -64,7 +63,7 @@ public class MainActivity extends Activity {
         } else {
             alarmManager.cancel(pendingIntent);
             setAlarmText("");
-            Log.d("MyActivity", "Alarm Off");
+            Log.d("MainActivity", "Alarm Off");
         }
     }
 
