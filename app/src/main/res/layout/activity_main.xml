@@ -23,13 +23,24 @@
         android:layout_alignParentStart="true" />
 
     <ToggleButton
-        android:id="@+id/toggleButton"
+        android:id="@+id/alarmToggle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:checked="false"
         android:onClick="OnToggleClicked" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/alarmText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/alarmToggle"/>
 
 </LinearLayout>
 
