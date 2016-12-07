@@ -26,6 +26,7 @@ public class MainActivity extends Activity {
     private TimePicker alarmTimePicker;
     private static MainActivity inst;
     private TextView alarmTextView;
+    EditText editText;
 
     public static MainActivity instance() {
         return inst;
@@ -46,11 +47,13 @@ public class MainActivity extends Activity {
         alarmTextView = (TextView) findViewById(R.id.alarmText);
         ToggleButton alarmToggle = (ToggleButton) findViewById(R.id.alarmToggle);
         alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        editText = (EditText) findViewById(R.id.editText);
 
     }
     public void OnToggleClicked(View view)
     {
         if (((ToggleButton) view).isChecked()) {
+            String text = editText.getText().toString();
             Log.d("MyActivity", "Alarm On");
             Calendar calendar = Calendar.getInstance();
             calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getCurrentHour());
@@ -65,7 +68,7 @@ public class MainActivity extends Activity {
         }
     }
 
-        public void setAlarmText(String alarmText) {
+    public void setAlarmText(String alarmText) {
 
             alarmTextView.setText(alarmText);
     }

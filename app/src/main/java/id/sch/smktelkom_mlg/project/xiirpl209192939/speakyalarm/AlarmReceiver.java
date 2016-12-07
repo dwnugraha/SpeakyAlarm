@@ -17,16 +17,15 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class AlarmReceiver extends WakefulBroadcastReceiver {
-    TextView mTextview;
     TextToSpeech t1;
 
         @Override
         public void onReceive(final Context context, Intent intent)
         {
-            Toast.makeText(context, "Alarm! Wake up! Wake up!", Toast.LENGTH_LONG).show();
+            MainActivity inst = MainActivity.instance();
+            inst.setAlarmText("Alarm! Wake up! Wake up!");
           Uri alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
-//            mTextview = (TextView)findViewById(R.id.textView);
-//
+
 //            t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
 //                @Override
 //                public void onInit(int status) {
@@ -35,7 +34,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
 //                    }
 //                }
 //            });
-//            String toSpeak =  mTextview.setText(getIntent().getStringExtra("mytext"));
+//            String toSpeak =  ;
 //            Toast.makeText(getApplicationContext(), toSpeak,Toast.LENGTH_SHORT).show();
 //            t1.speak(toSpeak, TextToSpeech.QUEUE_FLUSH, null);
             if (alarmUri == null)
