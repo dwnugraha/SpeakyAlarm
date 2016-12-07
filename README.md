@@ -8,7 +8,7 @@
 ![ScreenshootSpeakyAlarm2](https://github.com/dwnugraha/SpeakyAlarm/blob/master/WhatsApp%20Image%202016-12-07%20at%207.35.13%20AM%20(1).jpeg)
 
 # Video Aplikasi
-<a href ="https://youtu.be/8leTG3Ehjlo
+<a href ="https://youtu.be/8leTG3Ehjlo" target="_blank">
 
 # Link APK Aplikasi
 ![Aplikasi SpeakyAlarm](https://drive.google.com/open?id=0B1q0GCtA6UptX20zVnVFa1lYcHM)
