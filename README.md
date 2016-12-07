@@ -1,14 +1,14 @@
 # SpeakyAlarm
 
 # Penjelasan Aplikasi :
-# Aplikasi alarm ini buat untuk mengingatkan atau pemberitahuan bagi para pengguna alarm untuk memulai aktifitas atau kegiatan yang akan dilakukan
+# Aplikasi alarm ini dibuat untuk mengingatkan atau pemberitahuan bagi para pengguna alarm untuk memulai aktifitas atau kegiatan yang akan dilakukan
 
 # ScreenShoot Aplikasi
 ![ScreenshootSpeakyAlarm](https://github.com/dwnugraha/SpeakyAlarm/blob/master/2.jpeg)
 ![ScreenshootSpeakyAlarm2](https://github.com/dwnugraha/SpeakyAlarm/blob/master/WhatsApp%20Image%202016-12-07%20at%207.35.13%20AM%20(1).jpeg)
 
 # Video Aplikasi
-<a href ="https://youtu.be/8leTG3Ehjlo" target="_blank">
+<a href ="https://youtu.be/8leTG3Ehjlo" target="_blank"> </a>
 
 # Link APK Aplikasi
 ![Aplikasi SpeakyAlarm](https://drive.google.com/open?id=0B1q0GCtA6UptX20zVnVFa1lYcHM)
